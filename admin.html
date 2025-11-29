@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+      <h1>Fleet Form</h1>
+      <label>Reg No of Vehicle</label>
+      <input type="text" id="reg" required>
+      <label>Category</label>
+      <select id="Category">
+        <option value="Select">Select</option>
+        <option value="Auto">Auto</option>
+        <option value="Car">Car</option>
+        <option value="Truck">Truck</option>
+        <option value="Bus">Bus</option>
+      </select>
+
+      <label>Drive Name</label>
+      <input type="text" id="driver" required>
+      <label>Is Available</label><br>
+      <input type="checkbox" id="available">Available
+        <button onclick=" addFeet()">Add Fleet</button>
+    </div>
+</body>
+<script>
+    function addFeet(){
+     let reg = document.getElementById("reg").value.trim()
+
+     let category = document.getElementById("Category").value
+
+     let driver = document.getElementById("driver").value
+
+     let available = document.getElementById("available").checked
+
+     if(reg === ""|| category===""|| driver===""){
+        alert("All fields are required")
+        return;
+     }
+     let card = document.createElement("div")
+     card.className="card"
+     card.innerHTML=
+    }
+</script>
+</html>
